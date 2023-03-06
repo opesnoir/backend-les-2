@@ -13,18 +13,19 @@ public class Main {
         // Pas deze assignement aan zodat variable `one_point_5` de waarde `1.5` toegewezen krijgt.
         double one_point_5 = x - 1.5;
         // Pas deze assignement aan zodat variable `zero` de waarde `0` toegewezen krijgt. Je mag geen +, -, * of / gebruiken.
-        x = 0;
-        int zero = x;
+        //De modulus operator "%" geeft de restwaarde van de deling terug. In dit geval, als de waarde van "x" deelbaar is door 3, dan zal "zero" geinitialiseerd worden op 0. Anders zal "zero" de restwaarde van de deling krijgen, wat een waarde zal zijn tussen 1 en 2 inclusief.
+        int zero = x % 3;
         // Wat kunnen we op de lege regel hieronder schrijven zodat de System.out.println daaronder klopt?
-        x = 6;
+        x += 3; // zet je de x niet voor de =, dan geeft het 3 in plaats van x+3=6
         System.out.println(x); // six
         // Pas onderstaand statement aan zodat dat statement en het statement daarna kloppen
-        System.out.println(x); // six
-        x = 7;
+        System.out.println(x++); // six
         System.out.println(x); // seven
-        // Pas onderstaan statement aan zodat het statement klopt.
-        x = 6;
+        System.out.println(x--); // seven
         System.out.println(x); // six
+        // Pas onderstaan statement aan zodat het statement klopt.
+        System.out.println(++x); // seven
+        System.out.println(--x); // six
 
         int left = 5;
         int right = 0;
